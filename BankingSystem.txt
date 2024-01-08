@@ -1,1 +1,66 @@
+login = False
+username = input("insert your username")
+password = input ("insert your password")
+
+
+if username == "alexatesla" and password == "9876":
+    login = True
+else:
+    print("wrong username or password only have 2 tries")
+    print("insert your username")
+    username = input()
+
+    print("insert your password")
+    password = input()
+    if username == "alexatesla" and password == "9876":
+       print("welcome to the banking system") 
+       
+    else:
+        print("wrong username or password only have 1 trie")
+        print("insert your username")
+        username = input()
+        
+        print("insert your password")
+        password = input()
+        if username == "alexatesla" and password == "9876":
+            print("welcome to the banking system") 
+        else:
+            print("you have been blocked")
+
+
+if login:
+    print("welcome to the banking system") 
+    balance = 2000
+    
+    print ("What banking operation do you want to carry out?")
+    print("1. Deposit")
+    print("2. Withdraw")
+    print("3. View")
+    print("4. Transfer")
+    print("5. Cancel Operation")
+    option = input ()
+    
+    if option == "1":
+        print ("how much money you want to deposit?")
+        deposit = int(input())
+        balance += deposit
+        print(f"Your balance is {balance}") 
+    elif option == "2":
+        print("how much money you want to withdraw?")
+        withdraw = int(input())
+        balance -=withdraw
+        print (f"Your balance is {balance}")
+    elif option == "3":
+        print(f"Your balance is {balance}")
+
+    elif option == "4":
+        print("how much money you want to transfer?")
+        transfer = int(input())
+        balance -=transfer
+        print (f"Your balance is {balance}")
+    elif option == "5":
+        print("operation cancelled")
+print("Finish Operation")
+
+
 
